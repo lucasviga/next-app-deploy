@@ -54,9 +54,7 @@ export default function Home({ repositories }) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await fetch('https://api.github.com/users/lucasviga/repos');
-  const data = await response.json();
-
-  console.log(data[0]);
+  const data = await response.json();  
   
   return {
     props: {
