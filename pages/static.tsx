@@ -1,8 +1,14 @@
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 export default function Static({ user }){
   return (
-    <h1>{user.name}</h1>
+    <>
+      <Head>
+        <title>Static Page</title>
+      </Head>
+      <h1>{user.name}</h1>
+    </>
   )
 }
 
